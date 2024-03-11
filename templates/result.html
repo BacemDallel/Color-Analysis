@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Analysis Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Color Analysis Results</h1>
+    <div class="color-container">
+        {% for color in colors %}
+            <div class="color-box" style="background-color: {{ color }};">{{ color }}</div>
+        {% endfor %}
+    </div>
+<br>
+
+
+    <div class="centered-div" >
+        <a href="{{url_for('index')}}" class="upload-link">Upload Another Image</a>
+    </div>
+</body>
+</html>
+
